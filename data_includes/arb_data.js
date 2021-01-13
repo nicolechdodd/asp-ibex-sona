@@ -1,23 +1,18 @@
-var shuffleSequence = seq("intro", sepWith("sep", seq("practice", rshuffle("s1", "s2"))), sepWith("sep", rshuffle("q1", "q2")));
+var shuffleSequence = seq("intro", sepWith("sep", seq("practice", rshuffle("s1", "s2"))),
+                                    sepWith("sep", rshuffle("q1", "q2")));
 var practiceItemTypes = ["practice"];
 
 var defaults = [
     "Separator", {
         transfer: 1000,
-        normalMessage: "Please wait for the next sentence.",
-        errorMessage: "Wrong. Please wait for the next sentence."
+        normalMessage: "Please wait for the next sentence.", // TODO if keep, translate
+        errorMessage: "Wrong. Please wait for the next sentence." // TODO if keep, translate
     },
     "DashedSentence", {
         mode: "self-paced reading"
     },
-    "AcceptabilityJudgment", {
-        as: ["1", "2", "3", "4", "5", "6", "7"],
-        presentAsScale: true,
-        instructions: "Use number keys or click boxes to answer.",
-        leftComment: "(Bad)", rightComment: "(Good)"
-    },
     "Question", {
-        hasCorrect: true
+        as: ["True", "False"] // TODO translate
     },
     "Message", {
         hideProgressBar: true
