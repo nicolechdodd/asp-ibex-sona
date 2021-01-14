@@ -1,25 +1,34 @@
-var shuffleSequence = seq("intro", sepWith("sep", seq("practice", rshuffle("s1", "s2"))),
-                                    sepWith("sep", rshuffle("q1", "q2")));
+var shuffleSequence = seq("intro", // shows intro page
+                      sepWith("sep", // separate with sep defined default
+                      seq("practice", rshuffle("s1", "s2"))), // other items that are NOT sep
+                      sepWith("sep", // another sep
+                      rshuffle("q1", "q2"))); // more items that are NOT sep
+                      // this syntax is important to keep the s1/q1 ordering
+
 var practiceItemTypes = ["practice"];
 
 var defaults = [
     "Separator", {
-        transfer: 1000,
-        normalMessage: "Please wait for the next sentence.", // TODO if keep, translate
-        errorMessage: "Wrong. Please wait for the next sentence." // TODO if keep, translate
+        transfer: "keypress",
+        normalMessage: "Press any key to continue.", // TODO if keep, translate
+        errorMessage: "Wrong. Press any key to continue." // TODO if keep, translate
     },
     "DashedSentence", {
-        mode: "self-paced reading"
+        mode: "self-paced reading" // TODO update for right-to-left language support
     },
     "Question", {
-        as: ["True", "False"] // TODO translate
+        // maybe need to define as and hasCorrect individually within each group (note that True should be on right)
+        as: ["True", "False"], // TODO translate
+        hasCorrect: true, // TODO how to change this to be question-specific? need to define correct answer
+        randomOrder: false,
+        presentHorizontally: true
     },
     "Message", {
         hideProgressBar: true
     },
     "Form", {
         hideProgressBar: true,
-        continueOnReturn: true,
+        continueMessage: "Click here to continue", // TODO translate; how to check if this works?
         saveReactionTime: true
     }
 ];
@@ -74,15 +83,15 @@ var items = [
     // There are two conditions.
     //
 
-    [["s1",1], "DashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
+    [["src1",1], "DashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
                "Question",       {q: "The actress was:", as: ["shy", "publicity-seeking", "impatient"]}],
-    [["s2",1], "DashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
+    [["orc1",1], "DashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
                "Question",       {q: "The actress was:", as: ["shy", "publicity-seeking", "impatient"]}],
 
     // The first question will be chosen if the first sentence from the previous two items is chosen;
     // the second question will be chosen if the second sentence from the previous pair of items is chosen.
-    [["q1",[100,1]], "AcceptabilityJudgment", {s: "Which actress did the journalist interview after meeting her PA on a previous occasion?"}],
-    [["q2",[100,1]], "AcceptabilityJudgment", {s: "Which actress did the journalist interview her husband after meeting on a previous occasion?"}],
+  //  [["q1",[100,1]], "AcceptabilityJudgment", {s: "Which actress did the journalist interview after meeting her PA on a previous occasion?"}],
+  //  [["q2",[100,1]], "AcceptabilityJudgment", {s: "Which actress did the journalist interview her husband after meeting on a previous occasion?"}],
 
     [["s1",2], "DashedSentence", {s: "The teacher helped struggling students who he encouraged to succeed without treating like idiots."},
                "Question",       {q: "What did the teacher do?",
@@ -94,8 +103,8 @@ var items = [
                                                                       "Encourage his best students to succeed",
                                                                       "Treat struggling students like idiots"]}],
 
-    [["q1",[200,2]], "AcceptabilityJudgment", {s: {html: "<b>Which struggling students</b> did the teacher encourage to succeed without treating their friends like idiots?"}}],
-    [["q2",[200,2]], "AcceptabilityJudgment", {s: {html: "<b>Which struggling students</b> did the teacher encourage their friends to succeed without treating like idiots?"}}],
+//    [["q1",[200,2]], "AcceptabilityJudgment", {s: {html: "<b>Which struggling students</b> did the teacher encourage to succeed without treating their friends like idiots?"}}],
+//    [["q2",[200,2]], "AcceptabilityJudgment", {s: {html: "<b>Which struggling students</b> did the teacher encourage their friends to succeed without treating like idiots?"}}],
 
     //
     // 10 self-paced-reading filler sentences.
