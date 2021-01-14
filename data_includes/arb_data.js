@@ -1,6 +1,6 @@
 var shuffleSequence = seq("intro", // shows intro page
                       sepWith("sep", // separate with sep defined default
-                      seq("practice", rshuffle("src", "orc", "f"))); // items that are NOT sep
+                      seq("practice", rshuffle("src", "orc", "f")))); // items that are NOT sep
 
 var practiceItemTypes = ["practice"];
 var practiceItemMessage = "Practice"; // TODO translate
