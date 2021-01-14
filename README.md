@@ -10,7 +10,8 @@ Files for ASP self-paced reading experiment on Ibex
 
 **data_includes/arb_data.js**
 * configure for random comp questions
-* include Latin square fix for MTurk 
+* include Latin square fix for MTurk
+* add counter for SRC/ORC conditions 
 
 **js_includes/DashedSentence.js**
 * configure controller for right-to-left language support
