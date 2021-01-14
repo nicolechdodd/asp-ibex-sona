@@ -6,6 +6,9 @@ var shuffleSequence = seq("intro", // shows intro page
                       // this syntax is important to keep the s1/q1 ordering
 
 var practiceItemTypes = ["practice"];
+var practiceItemMessage = "Practice"; // TODO translate
+
+var pageTitle = "Experiment"; // TODO translate
 
 var defaults = [
     "Separator", {
@@ -17,9 +20,7 @@ var defaults = [
         mode: "self-paced reading" // TODO update for right-to-left language support
     },
     "Question", {
-        // maybe need to define as and hasCorrect individually within each group (note that True should be on right)
-        as: ["True", "False"], // TODO translate
-        hasCorrect: true, // TODO how to change this to be question-specific? need to define correct answer
+        as: ["نعم","لا"], // TODO translate; hopefully this fixes right-to-left problem
         randomOrder: false,
         presentHorizontally: true
     },
@@ -28,10 +29,13 @@ var defaults = [
     },
     "Form", {
         hideProgressBar: true,
-        continueMessage: "Click here to continue", // TODO translate; how to check if this works?
+        continueMessage: "Click here to continue", // TODO translate, make arrow point other way
         saveReactionTime: true
     }
 ];
+
+var completionMessage = "Thank you for completing the task. Your completion code is xxx. Please return to Mechanical Turk and input your code for credit.";
+// add random variable for completion code here?
 
 var items = [
 
@@ -56,27 +60,19 @@ var items = [
     //
     //["setcounter", "__SetCounter__", { }],
 
-    // NOTE: You could also use the 'Message' controller for the experiment intro (this provides a simple
-    // consent checkbox).
-
     ["intro", "Form", {
-        html: { include: "example_intro.html" },
+        html: { include: "intro.html" },
         validators: {
-            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
+            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; } // TODO translate
         }
     } ],
 
-    //
     // Three practice items for self-paced reading (one with a comprehension question).
     //
     ["practice", "DashedSentence", {s: "This is a practice sentence to get you used to reading sentences like this."}],
     ["practice", "DashedSentence", {s: "This is another practice sentence with a practice question following it."},
-                 "Question", {hasCorrect: false, randomOrder: false,
-                              q: "How would you like to answer this question?",
-                              as: ["Press 1 or click here for this answer.",
-                                   "Press 2 or click here for this answer.",
-                                   "Press 3 or click here for this answer."]}],
-    ["practice", "DashedSentence", {s: "This is the last practice sentence before the experiment begins."}],
+                 "Question", {hasCorrect: 1, randomOrder: false, // 0 = True is correct, 1 = False is correct
+                              q: "How would you like to answer this question?"}],
 
     //
     // Two "real" (i.e. non-filler) self-paced reading items with corresponding acceptability judgment items.
