@@ -1,9 +1,6 @@
 var shuffleSequence = seq("intro", // shows intro page
                       sepWith("sep", // separate with sep defined default
-                      seq("practice", rshuffle("s1", "s2"))), // other items that are NOT sep
-                      sepWith("sep", // another sep
-                      rshuffle("q1", "q2"))); // more items that are NOT sep
-                      // this syntax is important to keep the s1/q1 ordering
+                      seq("practice", rshuffle("s1", "s2"))); // items that are NOT sep
 
 var practiceItemTypes = ["practice"];
 var practiceItemMessage = "Practice"; // TODO translate
@@ -79,9 +76,9 @@ var items = [
     // There are two conditions.
     //
 
-    [["src1",1], "DashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
+    [["s1",1], "DashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
                "Question",       {q: "The actress was:", as: ["shy", "publicity-seeking", "impatient"]}],
-    [["orc1",1], "DashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
+    [["s2",1], "DashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
                "Question",       {q: "The actress was:", as: ["shy", "publicity-seeking", "impatient"]}],
 
     // The first question will be chosen if the first sentence from the previous two items is chosen;
