@@ -19,10 +19,10 @@ jqueryWidget: {
         this.saveReactionTime = dget(this.options, "saveReactionTime", false);
         this.obligatoryErrorGenerator =
             dget(this.options, "obligatoryErrorGenerator",
-                 function (field) { return "The \u2018" + field + "\u2019 field is obligatory."; });
+                 function (field) { return "The \u2018" + field + "\u2019 field is obligatory."; }); // TODO translate 
         this.obligatoryCheckboxErrorGenerator =
             dget(this.options, "obligatoryCheckboxErrorGenerator",
-                 function (field) { return "You must check the " + field + " checkbox to continue. hehe hoho"; });
+                 function (field) { return "You must check the " + field + " checkbox to continue."; }); // TODO translate
         this.obligatoryRadioErrorGenerator =
             dget(this.options, "obligatoryRadioErrorGenerator",
                  function (field) { return "You must select an option for \u2018" + field + "\u2019."; });

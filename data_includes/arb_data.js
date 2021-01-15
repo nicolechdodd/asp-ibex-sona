@@ -1,4 +1,4 @@
-var shuffleSequence = seq("intro", // shows intro page
+var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro page & updates Latin Square immediately
                       sepWith("sep", // separate with sep defined default
                       seq("practice", rshuffle("src", "orc", "f")))); // items that are NOT sep
 
@@ -11,8 +11,8 @@ var showProgressBar = false;
 var defaults = [
     "Separator", {
         transfer: "keypress",
-        normalMessage: "Press any key to continue.", // TODO if keep, translate
-        errorMessage: "Wrong. Press any key to continue." // TODO if keep, translate
+        normalMessage: "Press any key to continue.", // TODO translate
+        errorMessage: "Wrong. Press any key to continue." // TODO translate
     },
     "DashedSentence", {
         mode: "self-paced reading"
@@ -32,8 +32,9 @@ var defaults = [
     }
 ];
 
-var completionMessage = "Thank you for completing the task. Your completion code is xxx. Please return to Mechanical Turk and input your code for credit.";
-// add random variable for completion code here?
+var randomnumber = String(Math.floor(Math.random()*10001));
+var rn = String("Thank you for participating! Your completion code is ASP" + randomnumber + ". Please return to Mechanical Turk and input your code for credit."); // TODO translate
+var completionMessage = rn;
 
 var items = [
 
@@ -45,7 +46,8 @@ var items = [
     // the shuffle sequence, you must set the 'manualSendResults' configuration variable to 'true', since
     // otherwise, results are automatically sent at the end of the experiment.
     //
-    //["sr", "__SendResults__", { }],
+
+    ["sr", "__SendResults__", { }],
 
     ["sep", "Separator", { }],
 
@@ -56,7 +58,8 @@ var items = [
     // an 'inc' option, the counter is incremented by the specified amount. If given a 'set' option,
     // the counter is set to the given number. (E.g., { set: 100 }, { inc: -1 })
     //
-    //["setcounter", "__SetCounter__", { }],
+
+    ["setcounter", "__SetCounter__", { }],
 
     ["intro", "Form", {
         html: { include: "intro.html" },
