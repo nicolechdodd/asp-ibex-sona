@@ -68,6 +68,8 @@ var items = [
         }
     } ],
 
+    // TODO add other intros
+
     //
     // Three practice items for self-paced reading (one with a comprehension question).
     //
