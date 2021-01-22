@@ -1,6 +1,6 @@
 function boolToInt(x) { if (x) return 1; else return 0; }
 
-$.widget("ui.MyDashedSentence", {
+$.widget("ui.RLDashedSentence", {
     _init: function() {
         this.cssPrefix = this.options._cssPrefix;
         this.utils = this.options._utils;
@@ -13,7 +13,7 @@ $.widget("ui.MyDashedSentence", {
 	    }
 	}
         else {
-            assert_is_arraylike(this.options.s, "Bad value for 's' option of MyDashedSentence.");
+            assert_is_arraylike(this.options.s, "Bad value for 's' option of RLDashedSentence.");
             this.words = this.options.s;
         }
         this.mode = dget(this.options, "mode", "self-paced reading");
@@ -50,7 +50,7 @@ $.widget("ui.MyDashedSentence", {
 
         // Precalculate MD5 of sentence.
         this.sentenceDescType = dget(this.options, "sentenceDescType", "literal");
-        assert(this.sentenceDescType == "md5" || this.sentenceDescType == "literal", "Bad value for 'sentenceDescType' option of MyDashedSentence.");
+        assert(this.sentenceDescType == "md5" || this.sentenceDescType == "literal", "Bad value for 'sentenceDescType' option of RLDashedSentence.");
         if (this.sentenceDescType == "md5") {
             var canonicalSentence = this.words.join(' ');
             this.sentenceDesc = hex_md5(canonicalSentence);
@@ -230,7 +230,7 @@ $.widget("ui.MyDashedSentence", {
     }
 });
 
-ibex_controller_set_properties("MyDashedSentence", {
+ibex_controller_set_properties("RLDashedSentence", {
     obligatory: ["s"],
     htmlDescription: function (opts) {
         return $(document.createElement("div")).text(opts.s);

@@ -15,7 +15,7 @@ var defaults = [
         normalMessage: "Press any key to continue.", // TODO translate
         errorMessage: "Wrong. Press any key to continue." // TODO translate
     },
-    "DashedSentence", {
+    "RLDashedSentence", {
         mode: "self-paced reading"
     },
     "Question", {
