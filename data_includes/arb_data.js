@@ -1,6 +1,7 @@
-var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro page & updates Latin Square immediately
+var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro pages & updates Latin Square immediately
                       sepWith("sep", // separate with sep defined default
-                      seq("practice", rshuffle("src", "orc", "f")))); // items that are NOT sep
+                      seq("practice", rshuffle("src", "orc", "f"))), // all items that are NOT sep
+                      "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
 var practiceItemMessage = "Practice"; // TODO translate
@@ -27,7 +28,7 @@ var defaults = [
     },
     "Form", {
         hideProgressBar: true,
-        continueMessage: "Click here to continue", // TODO translate, make arrow point other way
+        continueMessage: "Click here to continue", // continueOnReturn ?
         saveReactionTime: true
     }
 ];
@@ -63,12 +64,15 @@ var items = [
 
     ["intro", "Form", {
         html: { include: "intro.html" },
-        validators: {
-            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; } // TODO translate
-        }
     } ],
 
-    // TODO add other intros
+    ["intro2", "Form", {
+        html: { include: "intro2.html" },
+    } ],
+
+    ["outro", "Form", {
+      html: { include: "outro.html" }
+    } ],
 
     //
     // Three practice items for self-paced reading (one with a comprehension question).

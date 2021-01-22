@@ -3,16 +3,13 @@ Files for ASP self-paced reading experiment on Ibex
 
 ### TODO
 **chunk_includes/intro.html**
-* incorporate Mariam translation
+* incorporate Mariam translations
 
 **chunk_includes/intro2.html**
-* add participant questions from Qualtrics
-* configure for right-to-left
-* translate field labels
+* include forced validation and error message for language question
 
 **data_includes/arb_data.js**
-* add subsequent intro pages
-* continue design configuration (starting w/ practice)
+* incorporate Mariam translations
 
 **js_includes/RLDashedSentence.js**
 * test for right-to-left language support
