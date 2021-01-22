@@ -11,8 +11,5 @@ Files for ASP self-paced reading experiment on Ibex
 **data_includes/arb_data.js**
 * incorporate Mariam translations
 
-**js_includes/RLDashedSentence.js**
-* test for right-to-left language support
-
 **js_includes/Forms.js**
-* translate error messages to Arabic
+* translate error messages
