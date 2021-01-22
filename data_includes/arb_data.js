@@ -77,8 +77,8 @@ var items = [
     //
     // Three practice items for self-paced reading (one with a comprehension question).
     //
-    ["practice", "DashedSentence", {s: "This is a practice sentence to get you used to reading sentences like this."}],
-    ["practice", "DashedSentence", {s: "This is another practice sentence with a practice question following it."},
+    ["practice", "RLDashedSentence", {s: "This is a practice sentence to get you used to reading sentences like this."}],
+    ["practice", "RLDashedSentence", {s: "This is another practice sentence with a practice question following it."},
                  "Question", {hasCorrect: 1, randomOrder: false, // 0 = True is correct, 1 = False is correct
                               q: "How would you like to answer this question?"}],
 
@@ -87,37 +87,37 @@ var items = [
     // There are two conditions.
     //
 
-    [["src",1], "DashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
+    [["src",1], "RLDashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
                "Question",       {hasCorrect: 1, q: "The actress was:"}],
-    [["orc",1], "DashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
+    [["orc",1], "RLDashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
                "Question",       {hasCorrect: 0, q: "The actress was:"}],
 
-    [["src",2], "DashedSentence", {s: "The teacher helped struggling students who he encouraged to succeed without treating like idiots."},
+    [["src",2], "RLDashedSentence", {s: "The teacher helped struggling students who he encouraged to succeed without treating like idiots."},
                "Question",       {hasCorrect: 1, q: "What did the teacher do?"}],
-    [["orc",2], "DashedSentence", {s: "The teacher helped struggling students who without treating like idiots he encouraged to succeed."},
+    [["orc",2], "RLDashedSentence", {s: "The teacher helped struggling students who without treating like idiots he encouraged to succeed."},
                "Question",       {hasCorrect: 0, q: "What did the teacher do?"}],
 
     //
     // 10 self-paced-reading filler sentences.
     //
 
-    ["f", "DashedSentence", {s: "The foreign spy that encoded the top-secret messages was given a new mission that required going to Japan."}],
+    ["f", "RLDashedSentence", {s: "The foreign spy that encoded the top-secret messages was given a new mission that required going to Japan."}],
 
-    ["f", "DashedSentence", {s: "The receptionist that the real estate company just hired immediately familiarized herself with all the phone numbers of their clients."}],
+    ["f", "RLDashedSentence", {s: "The receptionist that the real estate company just hired immediately familiarized herself with all the phone numbers of their clients."}],
 
-    ["f", "DashedSentence", {s: "Only two specialized surgeons that work in the hospital could do this operation."}],
+    ["f", "RLDashedSentence", {s: "Only two specialized surgeons that work in the hospital could do this operation."}],
 
-    ["f", "DashedSentence", {s: "The gangsters that the local police officers tracked for years were represented by an inexperienced lawyer."}],
+    ["f", "RLDashedSentence", {s: "The gangsters that the local police officers tracked for years were represented by an inexperienced lawyer."}],
 
-    ["f", "DashedSentence", {s: "The woman that John had seen in the subway bought herself a pair of stunning shoes that cost a fortune."}],
+    ["f", "RLDashedSentence", {s: "The woman that John had seen in the subway bought herself a pair of stunning shoes that cost a fortune."}],
 
-    ["f", "DashedSentence", {s: "If the award-winning chef had entered this competition, he surely would have won first prize."}],
+    ["f", "RLDashedSentence", {s: "If the award-winning chef had entered this competition, he surely would have won first prize."}],
 
-    ["f", "DashedSentence", {s: "If the organized secretary had filed the documents when she first received them, they would have been easy to find."}],
+    ["f", "RLDashedSentence", {s: "If the organized secretary had filed the documents when she first received them, they would have been easy to find."}],
 
-    ["f", "DashedSentence", {s: "If the homemade beer had been left to ferment more, it would have been drinkable."}],
+    ["f", "RLDashedSentence", {s: "If the homemade beer had been left to ferment more, it would have been drinkable."}],
 
-    ["f", "DashedSentence", {s: "The cowboy that the bulls tried to trample injured himself getting off a horse."}],
+    ["f", "RLDashedSentence", {s: "The cowboy that the bulls tried to trample injured himself getting off a horse."}],
 
-    ["f", "DashedSentence", {s: "The patient that was admitted to the hospital last month still suffers severe pain in his left leg."}]
+    ["f", "RLDashedSentence", {s: "The patient that was admitted to the hospital last month still suffers severe pain in his left leg."}]
 ];
