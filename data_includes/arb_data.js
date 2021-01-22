@@ -11,9 +11,9 @@ var showProgressBar = false;
 
 var defaults = [
     "Separator", {
-        transfer: "keypress",
-        normalMessage: "Press any key to continue.", // TODO translate
-        errorMessage: "Wrong. Press any key to continue." // TODO translate
+        transfer: 1000,
+        normalMessage: "Please wait for the next sentence.", // TODO translate
+        errorMessage: "Wrong. Please wait for the next sentence." // TODO translate
     },
     "RLDashedSentence", {
         mode: "self-paced reading"
@@ -77,10 +77,10 @@ var items = [
     //
     // Three practice items for self-paced reading (one with a comprehension question).
     //
-    ["practice", "RLDashedSentence", {s: "This is a practice sentence to get you used to reading sentences like this."}],
-    ["practice", "RLDashedSentence", {s: "This is another practice sentence with a practice question following it."},
+    ["practice", "RLDashedSentence", {s: "جرت الأم إلى الفضاء الخارجي برقم حمام السباحة"}],
+    ["practice", "RLDashedSentence", {s: "بكت السمكة للشجرة بصوت مرتفع عبر طريق المشاة"},
                  "Question", {hasCorrect: 1, randomOrder: false, // 0 = True is correct, 1 = False is correct
-                              q: "How would you like to answer this question?"}],
+                              q: "هل الطفل أيقظ الأم؟"}],
 
     //
     // Two "real" (i.e. non-filler) self-paced reading items.
