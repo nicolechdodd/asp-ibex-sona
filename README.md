@@ -13,3 +13,8 @@ Files for ASP self-paced reading experiment on Ibex
 
 **js_includes/Forms.js**
 * translate error messages
+
+### fix
+* RTL language support in global css
+* force validation in language question
+* DashedSentence controller (showBehind & showAhead = false)
