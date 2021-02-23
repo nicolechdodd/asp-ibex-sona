@@ -19,7 +19,7 @@ $.widget("ui.RLDashedSentence", {
         this.mode = dget(this.options, "mode", "self-paced reading");
         this.wordTime = dget(this.options, "wordTime", 300); // Only for speeded accpetability.
         this.wordPauseTime = dget(this.options, "wordPauseTime", 100); // Ditto.
-        this.showAhead = dget(this.options, "showAhead", false);
+        this.showAhead = dget(this.options, "showAhead", true);
         this.showBehind = dget(this.options, "showBehind", true);
         this.currentWord = 0;
 

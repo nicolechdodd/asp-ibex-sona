@@ -1,61 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="ar">
 <head>
-<style>
-  input {
-      text-align: right;
-  }
-</style>
+<meta charset="utf-8">
 </head>
 
 <body>
-<div style="width: 40em; text-align: right">
+<div style="width: 40em; padding: 0 20px 0 30px;">
 
 <p>
-  .نحب كجزء من هذه الدراسة، أن نجمع منك قدرًا صغيرًا من المعلومات الديموغرافية. لن يتم ربط هذه المعلومات بهويتك في أي بيانات منشورة أو مقدمة ناتجة عن الدراسة. إكمال هذا النموذج أمرًا طوعيًا، ولكنه مفيد جدًا لنا إذا اخترت الإجابة. أنت حر في رفض الإجابة على أي من هذه الأسئلة
+نحب كجزء من هذه الدراسة، أن نجمع منك قدرًا صغيرًا من المعلومات الديموغرافية. لن يتم ربط هذه المعلومات بهويتك في أي بيانات منشورة أو مقدمة ناتجة عن الدراسة. إكمال هذا النموذج أمرًا طوعيًا، ولكنه مفيد جدًا لنا إذا اخترت الإجابة. أنت حر في رفض الإجابة على أي من هذه الأسئلة.
+</p>
+<br><br>
+
+<p>
+   العمر: <input name="age" type="text" size="30" />
 </p>
 
 <p>
-  <input name="age" type="text" size="30" />  :العمر
+   الجنس: <input name="gender" type="text" size="30" />
 </p>
 
 <p>
-  <input name="gender" type="text" size="30" />  :الجنس
+   الأصل العرقي: <input name="ethnicity" type="text" size="30" />
 </p>
 
 <p>
-  <input name="ethnicity" type="text" size="30" />  :الأصل العرقي
+   عرقك: <input name="race" type="text" size="30" />
 </p>
 
 <p>
-  <input name="race" type="text" size="30" />  :عرقك
+   مكان الميلاد: <input name="placeOfBirth" type="text" size="30" />
 </p>
 
 <p>
-  <input name="placeOfBirth" type="text" size="30" />  :مكان الميلاد
+   حيث نشأت: <input name="grownUp" type="text" size="30" />
 </p>
+<br><br>
 
 <p>
-  <input name="grownUp" type="text" size="30" />  :حيث نشأت
-</p>
-
-<p>
-  :اللغة الأم
+  ما هي اللغة/(اللغات) أو اللهجة/(لهجات) التي نشأت تتحدثها؟
   <br>
-  (يرجى ملاحظة أنه سيتم الدفع لك مقابل هذه التجربة بغض النظر عن ردك)
+<form required> <!-- this didn't work -->
+  <input type="checkbox" name="msa" /><label for="msa"></label> الفصحى
   <br>
-  الفصحى<input type="checkbox" name="msa" /><label for="msa"></label> <!-- how to make one of these two options obligatory? -->
-  <br>
-  :(غير ذلك (يرجى التحديد<input type="checkbox" name="other"/><label for="other"></label>
+  <input type="checkbox" name="other"/><label for="other"></label> :(غير ذلك (يرجى التحديد
   <br>
   <input name="otherExp" type="text" size="30" />
-  <!-- add error message -->
+</form>
 </p>
 
 <p>
-  <input name="otherLang" type="text" size="30" />  :اللغات الأخرى التي يتم التحدث بها
-  <br>
-  (يرجى وصف المكان الذي تم تعلمه ومدته، ودرجة الطلاقة / معرفة القراءة والكتابة، وعدد مرات استخدامها)
+   ما مدى مهارتك في اللهجة التي تتحدثها؟ (من ١٠- ١: ١ = فقير ، ١٠= ممتاز) <input name="fushaRate" type="text" size="5" />
+</p>
+
+<p>  ما مدى مهارتك في اللغة الفصيحة؟   (من ١٠-١ : ١ = فقير ، ١٠= ممتاز) <input name="dialectRate" type="text" size="5" />
+</p>
+
+<p>
+  اللغات الأخرى التي يتم التحدث بها (يرجى وصف المكان الذي تم تعلمه ومدته، ودرجة الطلاقة / معرفة القراءة والكتابة، وعدد مرات استخدامها):ا <input name="otherLang" type="text" size="30" />
 </p>
 
 </div>
