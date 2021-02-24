@@ -19,7 +19,7 @@ $.widget("ui.RLDashedSentence", {
         this.mode = dget(this.options, "mode", "self-paced reading");
         this.wordTime = dget(this.options, "wordTime", 300); // Only for speeded accpetability.
         this.wordPauseTime = dget(this.options, "wordPauseTime", 100); // Ditto.
-        this.showAhead = dget(this.options, "showAhead", false); // only this one is broken 
+        this.showAhead = dget(this.options, "showAhead", false); // only this one is broken
         this.showBehind = dget(this.options, "showBehind", false);
         this.currentWord = 0;
 
@@ -74,7 +74,7 @@ $.widget("ui.RLDashedSentence", {
         this.wdnjq = new Array(this.words.length); // 'word divs no jQuery'.
         for (var j = this.words.length; j >= 0; --j) {
             var div = $(document.createElement("div")).text(this.words[j]);
-            if (! this.showAhead)
+            if (! this.showAhead) // this is broken
                 div.css('border-color', this.background);
             this.mainDiv.append(div);
             this.wordDivs[j] = div;

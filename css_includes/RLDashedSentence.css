@@ -12,13 +12,13 @@
      background-color: white;
      border-bottom: 1px solid;
      color: white;
-     border-color: #9ea4b1;
+     border-bottom: 1px solid #9ea4b1;
      float: left;
      margin-right: 0.6em;
      margin-bottom: 2em;
 }
 .practice-text {
-    color: blue; 
+    color: blue;
     font-weight: bold;
 }
 .iphone-next {
