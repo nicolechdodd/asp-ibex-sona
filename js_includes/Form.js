@@ -11,7 +11,7 @@ jqueryWidget: {
 
         this.html = dget(this.options, "html");
         this.continueOnReturn = dget(this.options, "continueOnReturn", false);
-        this.continueMessage = dget(this.options, "continueMessage", "Click here to continue");
+        this.continueMessage = dget(this.options, "continueMessage", "اضغط هنا للاستمرار");
         this.checkedValue = dget(this.options, "checkedValue", "yes");
         this.uncheckedValue = dget(this.options, "uncheckedValue", "no");
         this.validators = dget(this.options, "validators", { });
@@ -25,7 +25,7 @@ jqueryWidget: {
                  function (field) { return "يجب عليك تحديد خانة الاختيار للمتابعة"; });
         this.obligatoryRadioErrorGenerator =
             dget(this.options, "obligatoryRadioErrorGenerator",
-                 function (field) { return "You must select an option for \u2018" + field + "\u2019."; });
+                 function (field) { return "You must select an option for \u2018" + field + "\u2019."; }); // no need to translate; no radio questions
 
         var t = this;
 
@@ -57,7 +57,7 @@ jqueryWidget: {
 
                 var rlines = [];
 
-                var inps = $(dom).find("input[type=text]");
+                var inps = $(dom).find("input[type=text]"); // this is why form doesn't work
                 var tas = $(dom).find("textarea");
                 for (var i = 0; i < tas.length; ++i) { inps.push(tas[i]); }
 
@@ -80,6 +80,9 @@ jqueryWidget: {
                     rlines.push([["Field name", csv_url_encode(inp.attr('name'))],
                                  ["Field value", csv_url_encode(inp.attr('value'))]]);
                 }
+
+
+                // add check for form??
 
                 var checks = $(dom).find("input[type=checkbox]");
                 for (var i = 0; i < checks.length; ++i) {

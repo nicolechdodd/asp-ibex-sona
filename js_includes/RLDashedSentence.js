@@ -20,7 +20,7 @@ $.widget("ui.RLDashedSentence", {
         this.wordTime = dget(this.options, "wordTime", 300); // Only for speeded accpetability.
         this.wordPauseTime = dget(this.options, "wordPauseTime", 100); // Ditto.
         this.showAhead = dget(this.options, "showAhead", true);
-        this.showBehind = dget(this.options, "showBehind", true);
+        this.showBehind = dget(this.options, "showBehind", false);
         this.currentWord = 0;
 
         // Is there a "stopping point" specified?

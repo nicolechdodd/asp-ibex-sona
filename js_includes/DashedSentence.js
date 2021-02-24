@@ -27,8 +27,8 @@ jqueryWidget: {
         this.blankText = dget(this.options, "blankText", "\u2014\u2014"/*mdash*/);
         this.wordTime = dget(this.options, "wordTime", this.display == "in place" ? 400 : 300); // Only for speeded accpetability.
         this.wordPauseTime = dget(this.options, "wordPauseTime", this.display == "in place" ? 0 : 100); // Ditto.
-        this.showAhead = dget(this.options, "showAhead", true);
-        this.showBehind = dget(this.options, "showBehind", true);
+        this.showAhead = dget(this.options, "showAhead", false);
+        this.showBehind = dget(this.options, "showBehind", false);
         assert(this.display == "dashed" || this.display == "in place",
                "Value of 'display' option for DashedSentence controller must be either " +
                "'dashed' (default) or 'in place'.");
@@ -115,7 +115,7 @@ jqueryWidget: {
 
                     if (j <= this.stoppingPoint)
                         this.stoppingPoint--;
-                    
+
                     continue;
                 }
 
