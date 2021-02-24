@@ -3,6 +3,7 @@ body {
     background-color: white;
     margin-left: 0;
     margin-top: 5em;
+    dir: rtl;
 }
 .lindent { margin-left: 5em; }
 .sending-results {
@@ -42,9 +43,4 @@ span.retry:hover {
 }
 span.retry:visited {
     color: blue;
-}
-
-html:lang(ar) {
-    dir: rtl;
-    text-align: right;
 }
