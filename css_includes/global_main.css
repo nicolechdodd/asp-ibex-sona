@@ -46,4 +46,5 @@ span.retry:visited {
 
 html:lang(ar) {
     dir: rtl;
+    text-align: right;
 }
