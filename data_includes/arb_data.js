@@ -15,11 +15,11 @@ var defaults = [
         normalMessage: "من فضلك انتظر الجملة التالية.", // Please wait for next sentence.
         errorMessage: "خطأ. من فضلك انتظر الجملة التالية." // Wrong. Please wait for next sentence.
     },
-    "DashedSentence", {
+    "RLDashedSentence", {
         mode: "self-paced reading"
     },
     "Question", {
-        as: ["نعم","لا"], // TODO translate; hopefully this fixes right-to-left problem
+        as: ["نعم","لا"], // hopefully this fixes right-to-left problem
         randomOrder: false,
         presentHorizontally: true
     },
@@ -28,7 +28,7 @@ var defaults = [
     },
     "Form", {
         hideProgressBar: true,
-        continueMessage: "Click here to continue", // continueOnReturn ?
+        continueMessage: "اضغط هنا للاستمرار", // Click here to continue
         saveReactionTime: true
     }
 ];

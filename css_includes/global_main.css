@@ -43,3 +43,7 @@ span.retry:hover {
 span.retry:visited {
     color: blue;
 }
+
+html:lang(ar) {
+    dir: rtl;
+}
