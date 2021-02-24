@@ -4,18 +4,18 @@ var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro pages 
                       "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
-var practiceItemMessage = "Practice"; // TODO translate
+var practiceItemMessage = "ممارسة";
 
-var pageTitle = "Experiment"; // TODO translate
+var pageTitle = "تجربة"; // Experiment
 var showProgressBar = false;
 
 var defaults = [
     "Separator", {
         transfer: 1000,
-        normalMessage: "Please wait for the next sentence.", // TODO translate
-        errorMessage: "Wrong. Please wait for the next sentence." // TODO translate
+        normalMessage: "من فضلك انتظر الجملة التالية.", // Please wait for next sentence.
+        errorMessage: "خطأ. من فضلك انتظر الجملة التالية." // Wrong. Please wait for next sentence.
     },
-    "RLDashedSentence", {
+    "DashedSentence", {
         mode: "self-paced reading"
     },
     "Question", {
