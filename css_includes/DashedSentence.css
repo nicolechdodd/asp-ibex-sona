@@ -12,7 +12,7 @@
     line-height: 400%;
 }
 .ospan {
-     border-bottom: 1px solid #FFFFFF; /* change underline color to white */
+     border-bottom: white; /* change underline color to white */
      background-color: white;
 }
 .ispan {

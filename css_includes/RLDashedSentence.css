@@ -10,9 +10,9 @@
 }
 .sentence div {
      background-color: white;
-     border-bottom: 1px solid;
+     border-bottom: 1px solid #FFFFFF; /* change underline color to white */
      color: white;
-     border-bottom: 1px solid #9ea4b1; // make this white
+     border-bottom: 1px solid #FFFFFF; /* change underline color to white */
      float: left;
      margin-right: 0.6em;
      margin-bottom: 2em;

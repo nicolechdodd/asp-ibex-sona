@@ -3,6 +3,7 @@ body {
     background-color: white;
     margin-left: 0;
     margin-top: 5em;
+    direction: rtl;
 }
 .lindent {
     margin-left: 5em;
@@ -32,9 +33,6 @@ p.practice-box {
     padding-bottom: 1em;
     font-size: small;
     text-align: center;
-}
-p.rtl{
-  direction: rtl;
 }
 span.retry {
     color: blue;
