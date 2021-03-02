@@ -19,10 +19,10 @@ jqueryWidget: {
         this.saveReactionTime = dget(this.options, "saveReactionTime", false);
         this.obligatoryErrorGenerator =
             dget(this.options, "obligatoryErrorGenerator",
-                 function (field) { return "حقل هذا إلزامي"; });
+                 function (field) { return "حقل هذا إلزامي"; }); // This field is obligatory
         this.obligatoryCheckboxErrorGenerator =
             dget(this.options, "obligatoryCheckboxErrorGenerator",
-                 function (field) { return "يجب عليك تحديد خانة الاختيار للمتابعة"; });
+                 function (field) { return "يجب عليك تحديد خانة الاختيار للمتابعة"; }); // You must check the consent checkbox to continue 
         this.obligatoryRadioErrorGenerator =
             dget(this.options, "obligatoryRadioErrorGenerator",
                  function (field) { return "You must select an option for \u2018" + field + "\u2019."; }); // no need to translate; no radio questions

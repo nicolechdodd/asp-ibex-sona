@@ -3,9 +3,10 @@ body {
     background-color: white;
     margin-left: 0;
     margin-top: 5em;
-    dir: rtl;
 }
-.lindent { margin-left: 5em; }
+.lindent {
+    margin-left: 5em;
+  }
 .sending-results {
     font-weight: bold;
     font-size: medium;
@@ -31,6 +32,9 @@ p.practice-box {
     padding-bottom: 1em;
     font-size: small;
     text-align: center;
+}
+p.rtl{
+  direction: rtl;
 }
 span.retry {
     color: blue;

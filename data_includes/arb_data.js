@@ -4,7 +4,7 @@ var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro pages 
                       "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
-var practiceItemMessage = "ممارسة";
+var practiceItemMessage = "ممارسة"; // TODO fix - still in English
 
 var pageTitle = "تجربة"; // Experiment
 var showProgressBar = false;
@@ -34,7 +34,7 @@ var defaults = [
 ];
 
 var randomnumber = String(Math.floor(Math.random()*10001));
-var rn = String("Thank you for participating! Your completion code is ASP" + randomnumber + ". Please return to Mechanical Turk and input your code for credit."); // TODO translate
+var rn = String("ASP شكرا لمشاركتك! رمز الإكمال الخاص بك هو" + randomnumber + ". يرجى العودة إلى Mechanical Turk وإدخال رمزك للحصول على جائزتك المالية."); // make sure this works
 var completionMessage = rn;
 
 var items = [
