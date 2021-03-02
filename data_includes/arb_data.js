@@ -4,7 +4,7 @@ var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro pages 
                       "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
-var practiceItemMessage = "ممارسة"; // TODO fix - still in English
+var practiceItemMessage = "woohee"; // TODO fix - still in English
 
 var pageTitle = "تجربة"; // Experiment
 var showProgressBar = false;
@@ -19,7 +19,7 @@ var defaults = [
         mode: "self-paced reading"
     },
     "Question", {
-        as: ["لا", "نعم"], // hopefully this fixes right-to-left problem
+        as: ["لا", "نعم"], // shows up in correct order in experiment
         randomOrder: false,
         presentHorizontally: true
     },
@@ -34,7 +34,7 @@ var defaults = [
 ];
 
 var randomnumber = String(Math.floor(Math.random()*10001));
-var rn = String("شكرا لمشاركتك! رمز الإكمال الخاص بك هو ASP" + randomnumber + ". يرجى العودة إلى Mechanical Turk وإدخال رمزك للحصول على جائزتك المالية."); // make sure this works
+var rn = String("شكرا لمشاركتك! رمز الإكمال الخاص بك هو ASP" + randomnumber + ". يرجى العودة إلى Mechanical Turk وإدخال رمزك للحصول على جائزتك المالية.");
 var completionMessage = rn;
 
 var items = [
