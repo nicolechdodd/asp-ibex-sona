@@ -19,7 +19,7 @@ var defaults = [
         mode: "self-paced reading"
     },
     "Question", {
-        as: ["نعم","لا"], // hopefully this fixes right-to-left problem
+        as: ["لا", "نعم"], // hopefully this fixes right-to-left problem
         randomOrder: false,
         presentHorizontally: true
     },
@@ -34,7 +34,7 @@ var defaults = [
 ];
 
 var randomnumber = String(Math.floor(Math.random()*10001));
-var rn = String(". يرجى العودة إلى Mechanical Turk وإدخال رمزك للحصول على جائزتك المالية." + randomnumber + "شكرا لمشاركتك! رمز الإكمال الخاص بك هو ASP"); // make sure this works
+var rn = String("شكرا لمشاركتك! رمز الإكمال الخاص بك هو ASP" + randomnumber + ". يرجى العودة إلى Mechanical Turk وإدخال رمزك للحصول على جائزتك المالية."); // make sure this works
 var completionMessage = rn;
 
 var items = [
