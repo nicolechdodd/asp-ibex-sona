@@ -78,7 +78,7 @@ var items = [
     // Practice items
     //
 
-    ["practice", "RLDashedSentence", {s: "جرت الأم إلى الفضاء الخارجي برقم حمام السباحة"}],
+    ["practice", "RLDashedSentence", {s: "جرت الأم إلى الفضاء الخارجي برقم حمام السباحة"}], // change these to real practice items
     ["practice", "RLDashedSentence", {s: "بكت السمكة للشجرة بصوت مرتفع عبر طريق المشاة"},
                  "Question", {hasCorrect: 1, randomOrder: false, // 0 = No is correct, 1 = Yes is correct
                               q: "هل الطفل أيقظ الأم؟"}],
