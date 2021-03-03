@@ -87,15 +87,36 @@ var items = [
     // There are two conditions.
     //
 
-    [["src",1], "RLDashedSentence", {s: "The journalist interviewed an actress who he knew to be shy of publicity after meeting on a previous occasion."},
-               "Question",       {hasCorrect: 1, q: "The actress was:"}],
-    [["orc",1], "RLDashedSentence", {s: "The journalist interviewed an actress who after meeting on a previous occasion he knew to be shy of publicity."},
-               "Question",       {hasCorrect: 0, q: "The actress was:"}],
+    [["src",1], "RLDashedSentence", {s: "البنت التي أيقظت الوالدة أزعجتها بشأن الرحلة إلى الشاطئ."},
+               "Question",       {hasCorrect: 0, q: "هل الطفل أيقظ الأم؟"}],
+    [["orc",1], "RLDashedSentence", {s: "البنت التي أيقظتها الوالدة أزعجتها بشأن الرحلة إلى الشاطئ."},
+               "Question",       {hasCorrect: 0, q: "هل الأم أيقظت الطفل؟"}],
 
-    [["src",2], "RLDashedSentence", {s: "The teacher helped struggling students who he encouraged to succeed without treating like idiots."},
-               "Question",       {hasCorrect: 1, q: "What did the teacher do?"}],
-    [["orc",2], "RLDashedSentence", {s: "The teacher helped struggling students who without treating like idiots he encouraged to succeed."},
-               "Question",       {hasCorrect: 0, q: "What did the teacher do?"}],
+    [["src",2], "RLDashedSentence", {s: "سائق الحافلة الذي تبع الطفل تساءل عن موقع الفندق."},
+               "Question",       {hasCorrect: 0, q: "هل اتبع سائق الحافلة الطفل؟"}],
+    [["orc",2], "RLDashedSentence", {s: "سائق الحافلة الذي تبعه الطفل تساءل عن موقع الفندق."},
+               "Question",       {hasCorrect: 0, q: "هل اتبع الطفل سائق الحافلة؟"}],
+
+    [["src",4], "RLDashedSentence", {s: "القاضية التي خاطبت الشاهدة لاحظت محامي الدفاع."},
+                "Question",       {hasCorrect: 0, q: "هل القاضي خاطب الشاهد؟"}],
+    [["orc",4], "RLDashedSentence", {s: "القاضية التي خاطبتها الشاهدة لاحظت محامي الدفاع."},
+                "Question",       {hasCorrect: 0, q: "هل الشاهد خاطب القاضي؟"}],
+
+    [["src",5], "RLDashedSentence", {s: "المدير الذي زار الرئيس تذكر بعض الحقائق غير المريحة."},
+                "Question",       {hasCorrect: 0, q: "هل قام المدير بزيارة الرئيس؟"}],
+    [["orc",5], "RLDashedSentence", {s: "المدير الذي زاره الرئيس تذكر بعض الحقائق غير المريحة."},
+                "Question",       {hasCorrect: 0, q: "هل قام الرئيس بزيارة المدير؟؟"}],
+
+    [["src",6], "RLDashedSentence", {s: "الجارة التي لاحظت السمسارة اشترت المنزل القديم."},
+                "Question",       {hasCorrect: 0, q: "هل لاحظ الجار سمسار العقارات؟"}],
+    [["orc",6], "RLDashedSentence", {s: "الجارة التي لاحظتها السمسارة اشترت المنزل القديم."},
+                "Question",       {hasCorrect: 0, q: "هل سمسار العقارات لاحظ الجار؟"}],
+
+    [["src",7], "RLDashedSentence", {s: "الطيار الذي أخّر الطاقم الأرضي بقي على المدرج لفترة طويلة."},
+                "Question",       {hasCorrect: 0, q: "هل قام الطيار بتأخير الطاقم الأرضي؟"}],
+    [["orc",7], "RLDashedSentence", {s: "الطيار الذي أخّره الطاقم الأرضي بقي على المدرج لفترة طويلة."},
+                "Question",       {hasCorrect: 0, q: "هل قام الطاقم الأرضي بتأخير الطيار؟"}],
+
 
     //
     // 10 self-paced-reading filler sentences.
