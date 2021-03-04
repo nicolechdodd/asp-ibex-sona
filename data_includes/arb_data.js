@@ -1,6 +1,6 @@
 var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro pages & updates Latin Square immediately
                       sepWith("sep", // separate with sep defined default
-                      seq("practice", rshuffle("src", "orc", "f-hf, f-lf"))), // all items that are NOT sep
+                      seq("practice", rshuffle("src", "orc", "f-hf", "f-lf"))), // all items that are NOT sep
                       "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
@@ -78,7 +78,7 @@ var items = [
     // Practice items
     //
 
-    ["practice", "RLDashedSentence", {s: "كانت الشرطة مراقبة المراهق لفترة طويلة، لأنه كان معروفاً جيداً بأنه مشاغب لكن ليس لديهم أدلة كافية."}],
+    ["practice", "RLDashedSentence", {s: "ذهب الرجل إلى السينما مع زوجته وأولاده."}],
     ["practice", "RLDashedSentence", {s: "شيماء انتقلت إلى بيت جديد لأن المطبخ في شقتها كان صغيراً جداً."},
                  "Question", {hasCorrect: 1, randomOrder: false, // 0 = No is correct, 1 = Yes is correct
                               q: "هل شيماء انتقلت إلى بيت جديد؟"}],
