@@ -1,6 +1,6 @@
 var shuffleSequence = seq("intro", "intro2", "setcounter", // shows intro pages & updates Latin Square immediately
                       sepWith("sep", // separate with sep defined default
-                      seq("practice", rshuffle("src", "orc", "f-hf, f-lf"))), // all items that are NOT sep
+                      seq("practice", rshuffle("src", "orc", "f-hf", "f-lf"))), // all items that are NOT sep
                       "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
