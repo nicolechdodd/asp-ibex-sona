@@ -71,7 +71,7 @@ var items = [
     } ],
 
     ["intro3", "Form", {
-        html: { include: "intro2.html" },
+        html: { include: "intro3.html" },
     } ],
 
     ["outro", "Form", {
