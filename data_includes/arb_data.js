@@ -33,8 +33,8 @@ var defaults = [
     }
 ];
 
-var randomnumber = String(Math.floor(Math.random()*10001));
-var rn = String("شكرا لمشاركتك! رمز الإكمال الخاص بك هو ASP" + randomnumber + ". يرجى العودة إلى Mechanical Turk وإدخال رمزك للحصول على جائزتك المالية.");
+var rn = String("شكرا لمشاركتك! رمز الإكمال الخاص بك هو " +
+  '100D1459' + ". يرجى العودة إلى Prolific وإدخال رمزك للحصول على جائزتك المالية.");
 var completionMessage = rn;
 
 var items = [
