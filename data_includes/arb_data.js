@@ -6,7 +6,7 @@ var shuffleSequence = seq("intro", "intro3", "intro2", "setcounter", // shows in
                       "exit"); // completes SONA credit
 
 var practiceItemTypes = ["practice"];
-var practiceItemMessage = "ممارسة";
+var practiceItemMessage = "Practice";
 
 var pageTitle = "تجربة"; // Experiment
 var showProgressBar = false;
