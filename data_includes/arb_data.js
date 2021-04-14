@@ -1,13 +1,17 @@
 var shuffleSequence = seq("intro", "intro3", "intro2", "setcounter", // shows intro pages & updates Latin Square immediately
                       sepWith("sep", // separate with sep defined default
                       seq("practice", rshuffle("src", "orc", "f-hf", "f-lf"))), // all items that are NOT sep
-                      "outro"); // collects comments (completion message displayed separately)
+                      "sr", // sends results before clicking on link to SONA
+                      "outro", // collects comments (completion message displayed separately)
+                      "exit"); // completes SONA credit
 
 var practiceItemTypes = ["practice"];
-var practiceItemMessage = "ممارسة"; // TODO fix - still in English
+var practiceItemMessage = "ممارسة";
 
 var pageTitle = "تجربة"; // Experiment
 var showProgressBar = false;
+
+var manualSendResults = true;
 
 var defaults = [
     "Separator", {
@@ -32,10 +36,6 @@ var defaults = [
         saveReactionTime: true
     }
 ];
-
-var rn = String("شكرا لمشاركتك! رمز الإكمال الخاص بك هو " +
-  '100D1459' + ". يرجى العودة إلى Prolific وإدخال رمزك للحصول على جائزتك المالية.");
-var completionMessage = rn;
 
 var items = [
 
@@ -77,6 +77,9 @@ var items = [
     ["outro", "Form", {
       html: { include: "outro.html" }
     } ],
+
+    ["exit", "Message", {
+      html: "<a href='https://ucdavis.sona-systems.com/webstudy_credit.aspx?experiment_id=2518&credit_token=48c3b66797994da28417dab0e7eb29a2&survey_code="+PennController.GetURLParameter("id")+"'>Confirm my submission on SONA</a>", transfer: null}],
 
     //
     // Practice items
