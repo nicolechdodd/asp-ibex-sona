@@ -36,7 +36,7 @@ var defaults = [
     }
 ];
 
-var completionMessage = String("Thank you for completing the experiment. The researcher will grant your SONA credit within 24 hours.");
+var completionMessage = "Thank you for completing the experiment. The researcher will grant your SONA credit within 24 hours.";
 
 var items = [
 
