@@ -1,7 +1,6 @@
 var shuffleSequence = seq("intro", "intro3", "intro2", "setcounter", // shows intro pages & updates Latin Square immediately
                       sepWith("sep", // separate with sep defined default
                       seq("practice", rshuffle("src", "orc", "f-hf", "f-lf"))), // all items that are NOT sep
-                      "sr", // sends results before clicking on link to SONA
                       "outro"); // collects comments (completion message displayed separately)
 
 var practiceItemTypes = ["practice"];
@@ -9,8 +8,6 @@ var practiceItemMessage = "Practice";
 
 var pageTitle = "تجربة"; // Experiment
 var showProgressBar = false;
-
-var manualSendResults = true;
 
 var defaults = [
     "Separator", {
@@ -36,7 +33,8 @@ var defaults = [
     }
 ];
 
-var completionMessage = "Thank you for completing the experiment. The researcher will grant your SONA credit within 24 hours.";
+var rn = String("Thank you for completing the experiment. The researcher will grant your SONA credit within 24 hours.");
+var completionMessage = rn;
 
 var items = [
 
